@@ -22,7 +22,7 @@ def valoresFaltantes(df):
     nulos = df.isnull().sum()
 
     #Ordenamos
-    nulos = nulos.sort_values(nulos[1], ascending=False)
+    nulos = nulos.sort_values(by=nulos[1], ascending=False)
 
     #Calculamos porcentaje en relación al total del DataFrame
     nulos = nulos.apply(lambda x : x / total * 100)
